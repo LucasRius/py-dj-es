@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: cloudguard-db
+    restart: always
+    environment:
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: cloudguard
+    ports:
+      - "5432:5432"
